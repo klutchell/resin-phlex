@@ -9,7 +9,7 @@ ARG FASTCGIPORT=9000
 ARG PORTS='$HTTPPORT:$HTTPSPORT:$FASTCGIPORT'
 
 # add local files, set custom NGINX directory
-COPY root /
+COPY app /
 
 RUN apk update \
     && apk --no-cache add gettext iptables \
